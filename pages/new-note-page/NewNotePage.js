@@ -19,7 +19,8 @@ export class NewNotePage extends Component {
 
   onFormSave = (values) => {
     console.log(values);
-    this.props.saveNewNote(values.message);
+    // เรียกใช้ prop dispatch property
+
     this.props.navigation.goBack();
   }
 
@@ -43,10 +44,10 @@ const mapStateToProps = (state) => ({
   
 })
 
-const mapDispatchToProps = dispatch => {
-  return {
-    saveNewNote: (message) => dispatch({ type: actions.ActionTypes.SAVE_NEW_NOTE, payload: message })
-  }
+// สร้าง props dispatch property ในรูปแบบของ function ที่ส่ง object dispatch ได้
+// { type: 'action name', payload: any }
+const mapDispatchToProps =  {
+  
 }
 
 

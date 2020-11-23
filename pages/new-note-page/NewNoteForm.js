@@ -11,10 +11,6 @@ export class NewNoteForm extends Component {
          // ถ้า function ได้รับ error ก็จะแสดง pop up ขึ้นมา
         if (error !== undefined && touched) {
             hasError = true;
-            Alert.alert(
-                'Opps',
-                error
-            );
         }
         return (
             <Item error={hasError}>
